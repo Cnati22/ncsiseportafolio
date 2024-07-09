@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda virtual</title>
+    <link rel="stylesheet" href="css/estilostienda.css"> <!--Enlaza la hoja de estilos-->
+</head>
+<body>
+    <header>
+        <h1>Tienda virtual</h1> <!--Titulo de la tienda-->
+    </header>
+
+    <div class="contenedor">
+        <div class="productos">
+            <!--Primer producto-->
+            <div class="producto">
+                <img src="css/img/p.hombre.png" alt="Hombre"> <!--Imagen del primer producto-->
+                <h3>Perfume de hombre POLO 125ml</h3> <!--Nombre del producto-->
+                <p>Precio: s/220</p> <!--Precio del primer producto-->
+                <button onclick="addtoCarrito('Perfume de hombre POLO', 220)">Agregar al carrito</button> <!--Boton para agregar al carrito-->
+            </div>
+
+            <!--Segundo producto-->
+            <div class="producto">
+                <img src="css/img/p.mujer.jpg" alt="Mujer">
+                <h3>Perfume de Mujer MISS DIOR 80ml</h3>
+                <p>Precio: s/519</p>
+                <button onclick="addtoCarrito('Perfume de mujer MISS DIOR', 519)">Agregar al carrito</button>
+            </div>
+
+            <!--Tercer producto-->
+            <div class="producto">
+                <img src="css/img/p.ninos.png" alt="Niños">
+                <h3>Perfume de niños 30ml</h3>
+                <p>Precio: s/85</p>
+                <button onclick="addtoCarrito('Perfume de niños', 85)">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito">
+            <h2>Carrito de compras</h2> <!--Titulo de la seccion del carrito-->
+            <ul id="car-list">  
+                <!--Espacio donde se agregan los productos-->
+
+            </ul>
+            <p>Total: s/<span id="car-total">0</span></p> <!--Total de compra-->
+            <button onclick="compra()">Realizar compra</button> <!--Boton para realizar compra-->
+        </div>
+    </div>
+
+    <script src="js/logica.js"></script>  <!--Vincular el archivo javascript-->
+</body>
+</html>
